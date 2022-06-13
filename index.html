@@ -4,74 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Summer Camp Registration Form </title>
-</head>
-<body>
-  <h1 id="title"><u>Summer Camp Registration Form </u></h1>
-    <p id="description"><b>Please have your parent/ legal guardian fill out this form with the required information. </b></p>
-  <form id="survey-form">
-    <label id="name-label">Enter your camper's first name: <input id="name" type="text" name="first-name" required></label>
-    <label id="name-label_2">Enter your camper's last name: <input id="name_2" type="text" name="last-name" required></label>
-<!-- Gender, Age, Grade scroll option -->
-    <label id="number-label">Age </label>
-    <select name="Age">
-      <option value="">(Select One:) </option>
-      <option value="1">10 </option>
-      <option value="2">11 </option>
-      <option value="3">12 </option>
-      <option value="4">13 </option>
-      <option value="5">14 </option>
-      <option value="6">15 </option>
-      <option value="7">16 </option>
-      <option value="8">17 </option>
-      <option value="9">18 </option>
-    </select>
-    <label id="nmber-label_2">Grade </label>
-    <select name="Grade">
-      <option value="">(Select One:) </option>
-      <option value="1">4 </option>
-      <option value="2">5 </option>
-      <option value="3">6 </option>
-      <option value="4">7 </option>
-      <option value="5">8 </option>
-      <option value="6">9 </option>
-      <option value="7">10 </option>
-      <option value="8">11 </option>
-      <option value="9">12 </option>
-    </select>
-    <label id="number-label_3">Gender </label>
-    <select name="Gender">
-      <option value="">(Select One:) </option>
-      <option value="1">Male </option>
-      <option value="2">Female </option>
-      <option value="3">Other </option>
-    </select>
-    <legend> Does your camper have any allergies?</legend>
-      <input id="Gluten" type="checkbox" name="allergies" value="Gluten"> Gluten</input>
-      <input id="Peanuts" type="checkbox" name="allergies" value="Peanuts"> Peanuts</input>
-      <input id="Dairy" type="checkbox" name="allergies" value="Dairy"> Dairy</input>
-      <input id="Lactose" type="checkbox" name="allergies" value="Lactose"> Lactose</input>
-      <input id="Other" type="checkbox" name="allergies" value="Other"> Other(s): <input type="text" name="allergy"></input>
-  <hr>
-  <h2>Emergency Contact Information </h2>
-    <p><b>You only need to fill out one of the boxes: </b></p>
-      <fieldset>
-        <label id="name-label_3">Parent/ Guardian (First) Name: <input id="name_3" type="text" name="first-name" required></label>
-        <label id="name-label_4">Parent/ Guardian (Last) Name: <input id="name_4" type="text" name="last-name" required></label>
-        <label id="number-label">Phone Number: <input id="number" type="tele" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required></label>
-        <label id="email-label">Email: <input id="email" type="email" name="email" required></label>
-        <label id="home-address-label">Home Address: <input id="home-address" type="text" name="home-address" required></label>
+    <title>Summer Youth Registration Form</title>
+  </head>
+  <body>
+    <form id="survey-form">
+      <h1 id="title"> Summer Youth Registraction </h1>
+      <p id="description"> Fill out the form below. </p>
+      <fieldset id="camper-fill-in">
+        <legend id="camper-information">Camper information: </legend>
+        <label id="name-label">Camper's First Name: <input id="name" name="camper-first-name" type="text" placeholder="Gustavo" required></label>
+        <label id="name-label_b">Camper's Last Name: <input id="name_b" name="camper-last-name" type="text" placeholder="Fring" required></label>
+        <label id="number-label">Age: <input id="number" name="age" type="number" min="9" max="18" placeholder="9-18" required></label>
+        <label id="gender-label">Gender
+          <select id="dropdown" name="referrer" type="checkbox" required>
+            <option type="checkbox" value="">(Select One) </option>
+            <option type="checkbox" value="1">Male </option>
+            <option type="checkbox" value="2">Female </option>
+            <option type="checkbox" value="3">Other </option>
+          </select>
+        </label>
+        <label id="grade-label">Grade: <input id="number_b" name="grade" type="number" min="5" max="12" placeholder="5-12" required></label>
       </fieldset>
-      <fieldset>
-        <label id="name-label_5">Parent/ Guardian (First) Name: <input id="name_5" type="text" name="first-name"></label>
-        <label id="name-label_6">Parent/ Guardian (Last) Name: <input id="name_6" type="text" name="last-name"></label>
-        <label id="number-label_2">Phone Number: <input id="number_2" type="tele" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"></label>
-        <label id="email-label_2">Email: <input id="email_2" type="email" name="email"></label>
-        <label id="home-address-label_2">Home Address: <input id="home-address_2" type="text" name="home-address"></label>
+      <fieldset id="camper-allergy">
+        <legend id="camper-information_b">Please check what allergy(ies) you may have (optional): </legend>
+        <label id="allergy-label">I am allergic to:
+<!--add the input, required, to allergy options-->
+          <input id="none" type="radio" name="allergy" value="none" checked>none </input>
+          <input id="gluten" type="radio" name="allergy" value="gluten">gluten </input>
+          <input id="peanuts" type="radio" name="allergy" value="peanuts">peanuts </input>
+          <input id="dairy" type="radio" name="allergy" value="dairy">dairy </input>
+          <input id="lactose" type="radio" name="allergy" value="lactose">lactose </input>
+          <input id="other" type="radio" name="allergy" value="other">other(s): <textarea type="text" name="allergy" placeholder="soy, pet, etc."></textarea></input>
+        <label>
       </fieldset>
-      <input type="checkbox" name="terms" class="inline" required> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/"> terms and conditions</a>
-      </label>
-      <button disabled>SUBMIT </button>
-    </form>
+    <hr>
+      <h2 id="parent-info">Emergency Contact Information </h2>
+      <p>Fill out the emergency contact information below:
+      <fieldset id="parent-fill-in">
+        <legend id="parent-one">Parent/ Legal Guardian information </legend>
+        <label id="name-label_1">Parent/ Legal Guardian First Name: <input id="name_1" name="parent-legal-guardian-name" type="text" placeholder="Saul" required></label>
+        <label id="name-label_2">Parent/ Legal Guardian Last Name: <input id="name_2" name="parent-legal-guardian-name" type="text" placeholder="Goodman" required></label>
+        <label id="number-label_1">Phone number: <input id="phone-number_1" name="phone-number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"></label>
+        <label id="email-label">Email-Address: <input id="email" type="email" name="email_1" placeholder="yourmommabigandfat@bing.com" required></label>
+        <label id="home-address-label_1">Home Address: <input id="home-address_1" type="address" name="home-address_1"></label>
+        <label id="email-address_1">Gender
+          <div>
+            <input type="checkbox" id="business-email_1" name="business-email" value="email" checked>
+            <label for="business-email">business email </label>
+            <input type="checkbox" id="personal-email_1" name="personal-email" value="email">
+            <label for="personal-email">personal email </label>
+          </div>
+        </label>
+      </fieldset>
+      <button id="submit"> Submit</button>
+    </form> 
   </body>
 </html>
